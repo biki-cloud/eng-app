@@ -65,7 +65,7 @@ const VoiceRecorder = () => {
             </button>
             <div>
                 <h3>Transcript:</h3>
-                <p>{transcript}</p>
+                <p id="recorded_message">{transcript}</p>
             </div>
         </div>
     );

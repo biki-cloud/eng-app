@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import Status from './Status';
 import Api from './Api';
-import AudioRecorder from "./AudioRecorder";
 import reportWebVitals from './reportWebVitals';
 import VoiceRecorder from "./VoiceRecorder";
 
@@ -14,7 +13,6 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <VoiceRecorder/>
-        <AudioRecorder/>
         {/*<App/>*/}
         <Api/>
         <Status/>

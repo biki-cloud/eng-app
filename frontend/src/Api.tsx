@@ -5,7 +5,14 @@ function Api() {
 
     const fetchData = async () => {
         // APIのエンドポイントを指定します
-        const url = "http://localhost:8080/gpt-api?prompt=hello";
+        const promptElement = document.getElementById("recorded_message");
+        // @ts-ignore
+        const promptText = promptElement.textContent;
+        console.log("promptText: " + promptText);
+        // @ts-ignore
+        const encodedPromptText = encodeURIComponent(promptText);
+        // const url = "http://localhost:8080/gpt-api?prompt=hello";
+        const url = `http://localhost:8080/gpt-api?prompt=${encodedPromptText}`;
         // const url = "http://localhost:8080/status";
 
         console.log(url);
