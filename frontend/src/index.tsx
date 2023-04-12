@@ -6,6 +6,7 @@ import Status from './Status';
 import Api from './Api';
 import reportWebVitals from './reportWebVitals';
 import VoiceRecorder from "./VoiceRecorder";
+import TextToSpeech from "./TextToSpeech";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -13,8 +14,8 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <VoiceRecorder/>
-        {/*<App/>*/}
         <Api/>
+        <TextToSpeech/>
         <Status/>
     </React.StrictMode>
 );

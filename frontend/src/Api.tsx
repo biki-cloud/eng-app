@@ -20,11 +20,14 @@ function Api() {
         const data = await response.json();
         console.log(data);
 
+        // @ts-ignore
+        document.getElementById("api-response").textContent = data["choices"][0]["message"]["content"]
+
         // 整形されたJSON文字列に変換します
-        const formattedJson = JSON.stringify(data, null, 2);
+        // const formattedJson = JSON.stringify(data, null, 2);
 
         // @ts-ignore
-        setResponseJson(formattedJson);
+        // setResponseJson(formattedJson);
     };
 
     return (
@@ -34,9 +37,10 @@ function Api() {
             {responseJson && (
                 <div>
                     <h2>Formatted JSON Response</h2>
-                    <pre>{responseJson}</pre>
+                    {/*<pre>{responseJson}</pre>*/}
                 </div>
             )}
+            <p id="api-response">api response</p>
         </div>
     );
 }
